@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desktop Design</title>
+	<link rel="stylesheet" type="text/css" href="desktopdesign.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script>
+function Total(qty,ud,total,value){
+ qty=document.getElementById(qty);
+ ud>0?qty.value++:qty.value--;
+ qty.value=Math.max(qty.value,0);
+ document.getElementById(total).value=qty.value*value;
+}
+	</script>
+</head>
+<body>
+	<div class= "displayCard" >
+		<img class="mainImg" src="atta5kg.jpg" alt="5kg atta" height="400" width="400">
+	</div>	
+	<div class="displayCard selectedItem">
+			<h3>Aashirvaad Atta - Whole wheat, 5kg pouch</h3>
+			<h5>Rs. 209</h5>
+			<br>
+			<h6> Pack Sizes </h6>
+			<a href="desktopdesign1.html">
+				<button type="button" class="btn btn-outline-success">
+					10 kg
+					<br>
+					Rs 399
+				</button>	
+			</a>	
+			<button type="button" class="btn btn-success">
+					5 kg
+					<br>
+					Rs 209	
+			</button>	
+			<br>
+			<br>
+			<h6>QUANTITY</h6>
+			 <input type="button" class="btn btn-light" name='subtract' onclick='Total("qty",-1,"total",209);' value='-'/>
+			 <input type="text" size="2" class="btn btn-light" name='qty' id='qty' readonly=true value="1"/>
+			 <input type="button" class="btn btn-light" name='add' onclick='Total("qty",1,"total",209);' value='+'/>
+			 <br>
+			 <br>
+			<button type="button" id="payment" class="btn btn-primary" style="width: 150px; height: 40px;"><p>Amount Payable</p></button>
+			 <p class="para"> = Rs. </p>
+			<input type="text" size="3" class="btn btn-light" name='total' id='total' value="209" />
+	</div>	
+	<div class="featured">
+		<div class="featuredImage hvr-grow">
+		<img src="masalaspices.jpg" alt="spices and masala" height="400" width="330" >
+		<h6 class="imgText">Spices and Masala</h6>
+		</div>
+		<div class=" topShelf">
+			<div class="featuredImage img1 hvr-grow">
+			<img src="pulses.jpg" alt="pulses" height="150" width="150"> 
+			<h6 class="smallImgText">Pulses</h6>
+			</div>
+			<div class="featuredImage img2 hvr-grow">
+			<img src="cooking oils.jpg" alt="cooking oils" height="150" width="150">
+			<h6 class="smallImgText">Cooking Oils</h6>
+			</div>
+		</div>	 
+		<div class=" bottomShelf">
+			<div class="featuredImage img3 hvr-grow">
+			<img src="rice.jfif" alt="rice" height="150" width="150">
+			<h6 class="smallImgText">Rice and Products</h6>
+			</div>
+			<div class="featuredImage img4 hvr-grow">
+			<img src="tea.jfif" alt="tea" height="150" width="150"> 
+			<h6 class="smallImgText">Tea</h6>
+			</div>
+		</div>	
+	</div>
+</body>
+</html>
